@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <meta name="author" content="Patrick Gundlach">
+  <meta name="dcterms.date" content="2012-11-02">
+  <title>TeX FAQ</title>
+  <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  <style type="text/css">
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; }
+code > span.dt { color: #902000; }
+code > span.dv { color: #40a070; }
+code > span.bn { color: #40a070; }
+code > span.fl { color: #40a070; }
+code > span.ch { color: #4070a0; }
+code > span.st { color: #4070a0; }
+code > span.co { color: #60a0b0; font-style: italic; }
+code > span.ot { color: #007020; }
+code > span.al { color: #ff0000; font-weight: bold; }
+code > span.fu { color: #06287e; }
+code > span.er { color: #ff0000; font-weight: bold; }
+  </style>
+  <link rel="stylesheet" href="style/main.css">
+</head>
+<body>
+<header>
+<h1 class="title">TeX FAQ</h1>
+<h2 class="author">Patrick Gundlach</h2>
+<h3 class="date">2012-11-02</h3>
+</header>
+<nav id="TOC">
+<ul>
+<li><a href="#allgemeines">Allgemeines</a><ul>
+<li><a href="#was-ist-tex">Was ist TeX?</a></li>
+<li><a href="#wie-installiere-ich-tex">Wie installiere ich TeX?</a></li>
+<li><a href="#wie-fange-ich-an-wenn-ich-latex-lernen-möchte">Wie fange ich an, wenn ich LaTeX lernen möchte?</a></li>
+<li><a href="#worin-liegt-der-unterschied-zwischen-tex-latex-und-context">Worin liegt der Unterschied zwischen TeX, LaTeX und ConTeXt?</a></li>
+<li><a href="#was-sind-pdftex-luatex-und-xetex">Was sind PDFTeX, LuaTeX und XeTeX?</a></li>
+<li><a href="#wie-bearbeite-ich-tex-dokumente">Wie bearbeite ich TeX Dokumente?</a></li>
+</ul></li>
+<li><a href="#äußere-erscheinung-der-dokumente">Äußere Erscheinung der Dokumente</a><ul>
+<li><a href="#ränder">Ränder</a></li>
+<li><a href="#schriftarten">Schriftarten</a></li>
+<li><a href="#ich-benötige-ein-spezielles-symbol-in-meinem-dokument.-wie-kann-ich-es-finden">Ich benötige ein spezielles Symbol in meinem Dokument. Wie kann ich es finden?</a></li>
+</ul></li>
+<li><a href="#abbildungen-und-gleitumgebungen">Abbildungen und Gleitumgebungen</a><ul>
+<li><a href="#wie-kann-ich-die-positionierung-der-gleitumgebungen-tabellen-und-abbildungen-beeinflussen">Wie kann ich die Positionierung der Gleitumgebungen (Tabellen und Abbildungen) beeinflussen?</a></li>
+<li><a href="#wie-kann-ich-tabellen-und-abbildungen-in-der-nähe-des-aufrufs-behalten">Wie kann ich Tabellen und Abbildungen in der Nähe des Aufrufs behalten?</a></li>
+</ul></li>
+<li><a href="#spezialitäten">Spezialitäten</a><ul>
+<li><a href="#was-machen-makeatletter-und-makeatother">Was machen <code>\makeatletter</code> und <code>\makeatother</code>?</a></li>
+</ul></li>
+<li><a href="#mathematiksatz">Mathematiksatz</a><ul>
+<li><a href="#warum-soll-ich-...-anstelle-von-...-benutzen">Warum soll ich <code>\[...\]</code> anstelle von <code>$$...$$</code> benutzen?</a></li>
+</ul></li>
+<li><a href="#dante">DANTE</a><ul>
+<li><a href="#was-ist-dante">Was ist DANTE?</a></li>
+<li><a href="#warum-soll-ich-mitglied-werden">Warum soll ich Mitglied werden?</a></li>
+<li><a href="#wie-werde-ich-mitglied">Wie werde ich Mitglied?</a></li>
+</ul></li>
+<li><a href="#über-diese-faq">Über diese FAQ</a><ul>
+<li><a href="#autoren">Autoren</a></li>
+<li><a href="#lizenz-dieser-faq">Lizenz dieser FAQ</a></li>
+</ul></li>
+</ul>
+</nav>
+<div id="main">
+<hr>
+<h1 id="allgemeines"><a href="#TOC">Allgemeines</a></h1>
+<h2 id="was-ist-tex"><a href="#TOC">Was ist TeX?</a></h2>
+<ul>
+<li>Software um Texte zu formatieren.</li>
+<li>Vergleichbar mit HTML: Eingabe ist nicht gleich der Ausgabe</li>
+<li>Aber auch vollwertige Programmiersprache, daher an manchen Stellen ungewöhnlich zu benutzen.</li>
+</ul>
+<h2 id="wie-installiere-ich-tex"><a href="#TOC">Wie installiere ich TeX?</a></h2>
+<ul>
+<li>Distribution nehmen TeXlive, MikTeX. Linux Distributionen neigen manchmal dazu etwas veraltet zu sein.</li>
+</ul>
+<h2 id="wie-fange-ich-an-wenn-ich-latex-lernen-möchte"><a href="#TOC">Wie fange ich an, wenn ich LaTeX lernen möchte?</a></h2>
+<ul>
+<li>l2kurz, Bücher</li>
+</ul>
+<h2 id="worin-liegt-der-unterschied-zwischen-tex-latex-und-context"><a href="#TOC">Worin liegt der Unterschied zwischen TeX, LaTeX und ConTeXt?</a></h2>
+<ul>
+<li>TeX ist die Grundlage, LaTeX und ConTeXt bieten sowas wie <code>\section{}</code> und <code>\tableofcontents</code>. Anfänger machen lieber LaTeX, weil es mehr deutschsprachige Literatur dazu gibt.</li>
+</ul>
+<h2 id="was-sind-pdftex-luatex-und-xetex"><a href="#TOC">Was sind PDFTeX, LuaTeX und XeTeX?</a></h2>
+<ul>
+<li>Engines, also Grundlagen wo TeX, LaTeX und ConTeXt laufen</li>
+</ul>
+<h2 id="wie-bearbeite-ich-tex-dokumente"><a href="#TOC">Wie bearbeite ich TeX Dokumente?</a></h2>
+<ul>
+<li>Normaler Texteditor, kein Word oder ähnliches</li>
+<li>TeX Editoren, siehe <a href="http://tex.stackexchange.com/questions/339/latex-editors-ides"><code class="url">http://tex.stackexchange.com/questions/339/latex-editors-ides</code></a></li>
+<li>Scientific Wordplace? Lyx?</li>
+</ul>
+<h1 id="äußere-erscheinung-der-dokumente"><a href="#TOC">Äußere Erscheinung der Dokumente</a></h1>
+<h2 id="ränder"><a href="#TOC">Ränder</a></h2>
+<ul>
+<li>KOMA Skript?</li>
+<li>Geometry Paket</li>
+</ul>
+<h2 id="schriftarten"><a href="#TOC">Schriftarten</a></h2>
+<h2 id="ich-benötige-ein-spezielles-symbol-in-meinem-dokument.-wie-kann-ich-es-finden"><a href="#TOC">Ich benötige ein spezielles Symbol in meinem Dokument. Wie kann ich es finden?</a></h2>
+<ul>
+<li><a href="http://detexify.kirelabs.org/classify.html">Detextify</a></li>
+<li><a href="http://www.ctan.org/tex-archive/info/symbols/comprehensive/symbols-a4.pdf">Comprehensive LaTeX symbols list</a></li>
+</ul>
+<h1 id="abbildungen-und-gleitumgebungen"><a href="#TOC">Abbildungen und Gleitumgebungen</a></h1>
+<h2 id="wie-kann-ich-die-positionierung-der-gleitumgebungen-tabellen-und-abbildungen-beeinflussen"><a href="#TOC">Wie kann ich die Positionierung der Gleitumgebungen (Tabellen und Abbildungen) beeinflussen?</a></h2>
+<h2 id="wie-kann-ich-tabellen-und-abbildungen-in-der-nähe-des-aufrufs-behalten"><a href="#TOC">Wie kann ich Tabellen und Abbildungen in der Nähe des Aufrufs behalten?</a></h2>
+<h1 id="spezialitäten"><a href="#TOC">Spezialitäten</a></h1>
+<h2 id="was-machen-makeatletter-und-makeatother"><a href="#TOC">Was machen <code>\makeatletter</code> und <code>\makeatother</code>?</a></h2>
+<h1 id="mathematiksatz"><a href="#TOC">Mathematiksatz</a></h1>
+<h2 id="warum-soll-ich-...-anstelle-von-...-benutzen"><a href="#TOC">Warum soll ich <code>\[...\]</code> anstelle von <code>$$...$$</code> benutzen?</a></h2>
+<h1 id="dante"><a href="#TOC">DANTE</a></h1>
+<h2 id="was-ist-dante"><a href="#TOC">Was ist DANTE?</a></h2>
+<h2 id="warum-soll-ich-mitglied-werden"><a href="#TOC">Warum soll ich Mitglied werden?</a></h2>
+<h2 id="wie-werde-ich-mitglied"><a href="#TOC">Wie werde ich Mitglied?</a></h2>
+<pre class="sourceCode latex"><code class="sourceCode latex">\newcommand{fosdfas}</code></pre>
+<hr>
+<h1 id="über-diese-faq"><a href="#TOC">Über diese FAQ</a></h1>
+<p>Ergänzungen und Korrekturen bitte an <script type="text/javascript">
+<!--
+h='&#116;&#x65;&#120;&#102;&#114;&#x61;&#x67;&#x65;&#110;&#46;&#100;&#x65;';a='&#64;';n='&#x69;&#110;&#102;&#x6f;';e=n+a+h;
+document.write('<a h'+'ref'+'="ma'+'ilto'+':'+e+'">'+'<code>'+e+'</code>'+'<\/'+'a'+'>');
+// -->
+</script><noscript>&#x69;&#110;&#102;&#x6f;&#32;&#x61;&#116;&#32;&#116;&#x65;&#120;&#102;&#114;&#x61;&#x67;&#x65;&#110;&#32;&#100;&#x6f;&#116;&#32;&#100;&#x65;</noscript> senden oder direkt im Github Archiv ergänzen.</p>
+<h2 id="autoren"><a href="#TOC">Autoren</a></h2>
+<h2 id="lizenz-dieser-faq"><a href="#TOC">Lizenz dieser FAQ</a></h2>
+<p>Die Textbeiträge dieser FAQ unterliegen der Lizenz <a href="http://creativecommons.org/licenses/by-sa/3.0/deed.de">CC-BY-SA</a>. Dadurch ist es erlaubt, die Texte frei zu verwenden, sofern sie weiterhin unter denselben Bedingungen verbreitet und die Autoren genannt werden. Die genauen Bestimmungen finden sich <a href="http://creativecommons.org/licenses/by-sa/3.0/deed.de">auf der Seite von Creative Commons</a> unter <a href="http://creativecommons.org/licenses/by-sa/3.0/deed.de"><code class="url">http://creativecommons.org/licenses/by-sa/3.0/deed.de</code></a>.</p>
+<a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/deed.de"><img alt="Creative Commons Lizenzvertrag" style="border-width:0" src="img/cc-by-sa.png" /></a>
+</div>
+</body>
+</html>
