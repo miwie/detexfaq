@@ -10,16 +10,20 @@ Allgemeines
 Was ist TeX?
 ------------
 
-* Software zur Formatierung von Texten 
-* Vergleichbar mit HTML: Eingabe ist nicht gleich der Ausgabe
-* Aber auch vollwertige Programmiersprache, daher an manchen Stellen ungewöhnlich zu benutzen.
+TeX ist eine Software zur **Formatierung von Texten**. Der Unterschied zu anderen Textverarbeitungssystem wie Word und OpenOffice.org ist, dass aus einer TeX-Datei, die vom Anwender erstellt wird, eine PDF-Datei generiert wird. Die ursprüngliche TeX-Datei wird mit einem Texteditor bearbeitet. Hierbei können verschiedene Befehle zur Gestaltung des Textes verwendet werden.
+
+Die Ausgabedatei im PDF-Format kann dann mit jedem Rechner problemlos betrachtet werden. Die Darstellung ist auf jedem Rechner gleich. Es drohen keine Darstellungsprobleme oder Versionskonflikte.
+
+Außerdem kann man TeX auch als Programmiersprache verwenden und bestimmte Dinge vereinfachen. Zum Beispiel unterstüzt LaTeX von Haus aus automatische Gliederungsbefehle, die dann bei Bedarf individuell angepasst werden können.
 
 Wie installiere ich TeX?
 ------------------------
 
+Um TeX, LaTeX und Co. verwenden zu können, braucht man eine sogenannte **TeX-Distribution**. Bekannte TeX-Distributionen sind [**TeX Live**](http://tug.org/texlive) (plattformübergreifend) und [**MiKTeX**](http://miktex.org) (Windows). Diese TeX-Distributionen sind freie Software und können daher kostenlos heruntergeladen und installiert werden.
+
 ### Linux
 
-Die meisten Linux-Distributionen bieten über die Paketverwaltung eine TeXlive-Installation an. (Das entsprechende Paket heißt in allen gänginge Distributionen `texlive`.) Für den Einstieg ist diese vollkommen ausreichend. Erfahrene Benutzer können TeXlive manuell aus anderen Quellen installieren, um immer eine aktuelle Version zu haben.
+Die meisten Linux-Distributionen bieten über die Paketverwaltung eine TeX-Live-Installation an. (Das entsprechende Paket heißt in allen gänginge Distributionen `texlive`.) Für den Einstieg ist diese vollkommen ausreichend. Erfahrene Benutzer können TeX Live manuell aus anderen Quellen installieren, um immer eine aktuelle Version zu haben.
 
 ### Windows
 
