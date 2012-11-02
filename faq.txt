@@ -106,7 +106,7 @@ Wie werde ich Mitglied?
 Über diese FAQ
 ===============
 
-Ergänzungen und Korrekturen bitte an <info@texfragen.de> senden oder direkt im Github Archiv ergänzen. 
+Ergänzungen und Korrekturen bitte an <info@texfragen.de> senden oder direkt im [Github Archiv](https://github.com/texdoc/detexfaq) unter <https://github.com/texdoc/detexfaq> ergänzen. [Pull requests](https://help.github.com/articles/using-pull-requests) sind immer gerne gesehen. Die offizielle Seite ist <http://www.texfragen.de>.
 
 Autoren
 -------
