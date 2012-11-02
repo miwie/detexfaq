@@ -10,14 +10,14 @@ Allgemeines
 Was ist TeX?
 ------------
 
-* Software um Texte zu formatieren. 
+* Software zur Formatierung von Texten 
 * Vergleichbar mit HTML: Eingabe ist nicht gleich der Ausgabe
 * Aber auch vollwertige Programmiersprache, daher an manchen Stellen ungewöhnlich zu benutzen.
 
 Wie installiere ich TeX?
 ------------------------
 
-* Distribution nehmen TeXlive, MikTeX. Linux Distributionen neigen manchmal dazu etwas veraltet zu sein.
+* Distribution nehmen TeXlive, MikTeX. Linux-Distributionen neigen manchmal dazu, etwas veraltet zu sein.
 
 Wie fange ich an, wenn ich LaTeX lernen möchte?
 -----------------------------------------------
@@ -42,6 +42,14 @@ Wie bearbeite ich TeX Dokumente?
 * Normaler Texteditor, kein Word oder ähnliches
 * TeX Editoren, siehe <http://tex.stackexchange.com/questions/339/latex-editors-ides>
 * Scientific Wordplace? Lyx?
+
+Wo bekomme ich Hilfe?
+---------------------
+
+Nicht jede offene Frage kann in diesen FAQ beantwortet werden. Weitere Quellen für Informationen und Hilfe rund um TeX sind:
+
+- die Mailingliste `tex-d-l` <!-- (Link? Beschreibung?) -->
+- [LaTeX Stack Exchange](http://tex.stackexchange.com/)
 
 
 Äußere Erscheinung der Dokumente
@@ -94,11 +102,19 @@ DANTE
 Was ist DANTE?
 --------------
 
+Die *Deutschsprachige Anwendervereinigung TeX e. V.*, kurz DANTE, hat es sich zum Ziel gesetzt, die Nutzung von TeX durch Betreuung, Beratung und Förderung von Entwicklungsprojekten zu unterstützen. Nähere Informationen finden sich auf der Homepage [dante.de](http://www.dante.de).
+
 Warum soll ich Mitglied werden?
 -------------------------------
 
+- Vereinszeitung [*Die technische Komödie*](http://www.dante.de/DTK.html)
+- Tagungen und Stammtische
+- …
+
 Wie werde ich Mitglied?
 -----------------------
+
+Der Mitgliedsantrag kann einfach [online auf dante.de](http://www.dante.de/index/Intern/Mitglied/AntragOnline.html) oder [schriftlich mit dem entsprechenden Formular](http://www.dante.de/index/Intern/Mitglied/AntragStandard.pdf) gestellt werden.
 
 
 ----
@@ -106,7 +122,7 @@ Wie werde ich Mitglied?
 Über diese FAQ
 ===============
 
-Ergänzungen und Korrekturen bitte an <info@texfragen.de> senden oder direkt im [Github Archiv](https://github.com/texdoc/detexfaq) unter <https://github.com/texdoc/detexfaq> ergänzen. [Pull requests](https://help.github.com/articles/using-pull-requests) sind immer gerne gesehen. Die offizielle Seite ist <http://www.texfragen.de>.
+Ergänzungen und Korrekturen bitte an <info@texfragen.de> senden oder direkt im [Github-Archiv](https://github.com/texdoc/detexfaq) unter <https://github.com/texdoc/detexfaq> ergänzen. [Pull requests](https://help.github.com/articles/using-pull-requests) sind immer gerne gesehen. Die offizielle Seite ist <http://www.texfragen.de>.
 
 Autoren
 -------
