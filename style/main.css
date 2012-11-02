@@ -3,9 +3,7 @@ body {
 	margin-right: auto;
 	width: 90%;
 	font-family: Garamond,Palatino;
-	background: url(dust.png);
-	/*background: url(striped_lens.png);*/
-
+	background: url(lightpaperfibers.png);
 }
 
 pre {
