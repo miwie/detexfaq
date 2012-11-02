@@ -17,7 +17,19 @@ Was ist TeX?
 Wie installiere ich TeX?
 ------------------------
 
-* Distribution nehmen TeXlive, MikTeX. Linux-Distributionen neigen manchmal dazu, etwas veraltet zu sein.
+### Linux
+
+Die meisten Linux-Distributionen bieten über die Paketverwaltung eine TeXlive-Installation an. (Das entsprechende Paket heißt in allen gänginge Distributionen `texlive`.) Für den Einstieg ist diese vollkommen ausreichend. Erfahrene Benutzer können TeXlive manuell aus anderen Quellen installieren, um immer eine aktuelle Version zu haben.
+
+### Windows
+
+Die einfachste Möglichkeit, TeX unter Windows zu installieren, ist MiKTeX. Auf der [MiKTeX-Homepage](http://miktex.org/download) steht ein Installer zum Download bereit.
+
+<!--
+### MacOS
+
+???
+-->
 
 Wie fange ich an, wenn ich LaTeX lernen möchte?
 -----------------------------------------------
