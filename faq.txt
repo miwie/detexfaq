@@ -1,0 +1,119 @@
+% TeX FAQ
+% Patrick Gundlach;
+% 2012-11-02
+
+----
+
+Allgemeines
+===========
+
+Was ist TeX?
+------------
+
+* Software um Texte zu formatieren. 
+* Vergleichbar mit HTML: Eingabe ist nicht gleich der Ausgabe
+* Aber auch vollwertige Programmiersprache, daher an manchen Stellen ungewöhnlich zu benutzen.
+
+Wie installiere ich TeX?
+------------------------
+
+* Distribution nehmen TeXlive, MikTeX. Linux Distributionen neigen manchmal dazu etwas veraltet zu sein.
+
+Wie fange ich an, wenn ich LaTeX lernen möchte?
+-----------------------------------------------
+
+* l2kurz, Bücher
+
+
+Worin liegt der Unterschied zwischen TeX, LaTeX und ConTeXt?
+----------------------------------------------------------
+
+* TeX ist die Grundlage, LaTeX und ConTeXt bieten sowas wie `\section{}` und `\tableofcontents`. Anfänger machen lieber LaTeX, weil es mehr deutschsprachige Literatur dazu gibt.
+
+Was sind PDFTeX, LuaTeX und XeTeX?
+---------------------------------
+
+* Engines, also Grundlagen wo TeX, LaTeX und ConTeXt laufen
+
+
+Wie bearbeite ich TeX Dokumente?
+--------------------------------
+
+* Normaler Texteditor, kein Word oder ähnliches
+* TeX Editoren, siehe <http://tex.stackexchange.com/questions/339/latex-editors-ides>
+* Scientific Wordplace? Lyx?
+
+
+Äußere Erscheinung der Dokumente
+================================
+
+Ränder
+------
+
+* KOMA Skript?
+* Geometry Paket
+
+
+Schriftarten
+------------
+
+Ich benötige ein spezielles Symbol in meinem Dokument. Wie kann ich es finden?
+------------------------------------------------------------------------------
+
+* [Detextify](http://detexify.kirelabs.org/classify.html)
+* [Comprehensive LaTeX symbols list](http://www.ctan.org/tex-archive/info/symbols/comprehensive/symbols-a4.pdf)
+
+
+Abbildungen und Gleitumgebungen
+================================
+
+Wie kann ich die Positionierung der Gleitumgebungen (Tabellen und Abbildungen) beeinflussen?
+--------------------------------------------------------------------------------------------
+
+Wie kann ich Tabellen und Abbildungen in der Nähe des Aufrufs behalten?
+-----------------------------------------------------------------------
+
+
+
+Spezialitäten
+=============
+
+Was machen `\makeatletter` und `\makeatother`?
+---------------------------------------------
+
+Mathematiksatz
+==============
+ 
+Warum soll ich `\[...\]` anstelle von `$$...$$` benutzen?
+----------------------------------------------------------
+
+
+DANTE
+=====
+
+Was ist DANTE?
+--------------
+
+Warum soll ich Mitglied werden?
+-------------------------------
+
+Wie werde ich Mitglied?
+-----------------------
+
+
+----
+
+Über diese FAQ
+===============
+
+Ergänzungen und Korrekturen bitte an <info@texfragen.de> senden oder direkt im Github Archiv ergänzen. 
+
+Autoren
+-------
+
+Lizenz dieser FAQ
+-----------------
+
+Die Textbeiträge dieser FAQ unterliegen der Lizenz [CC-BY-SA](http://creativecommons.org/licenses/by-sa/3.0/deed.de). Dadurch ist es erlaubt, die Texte frei zu verwenden, sofern sie weiterhin unter denselben Bedingungen verbreitet und die Autoren genannt werden. Die genauen Bestimmungen finden sich [auf der Seite von Creative Commons](http://creativecommons.org/licenses/by-sa/3.0/deed.de) unter <http://creativecommons.org/licenses/by-sa/3.0/deed.de>.
+
+<a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/deed.de"><img alt="Creative Commons Lizenzvertrag" style="border-width:0" src="img/cc-by-sa.png" /></a>
