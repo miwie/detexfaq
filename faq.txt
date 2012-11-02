@@ -99,6 +99,29 @@ Wie kann ich Tabellen und Abbildungen in der Nähe des Aufrufs behalten?
 
 
 
+Bibliographien und Literaturverweise
+====================================
+
+Was sind BibTeX und biber?
+--------------------------
+- bibtex-Programm (und bibtex8)
+- biber als Nachfolger von bibtex (dem Programm)
+- BibTeX-Syntax (.bib-Dateien)
+
+Was ist biblatex?
+-----------------
+Biblatex ist ein Makropaket zum Erstellen von Literaturverzeichnissen mit LaTeX und 
+BibTeX, das bereits mehrere Zitierstile enthält und eine hohe Flexibilität aufweist. 
+Das Paket wurde im August 2006 von Philipp Lehman erstmals vorgestellt. Seit der Version 
+0.9 ist es auch in den gängigen TeX-Distributionen wie MiKTeX oder TeX Live enthalten. 
+
+Anders als »herkömmliche« Bibliographie-Pakete benutzt biblatex das Programm BibTeX nur 
+zur Sortierung der Einträge im Literaturverzeichnis und zur Erzeugung von Labels. Die 
+Formatierungen werden dagegen mit LaTeX-Befehlen vorgenommen, was es einfacher macht, 
+die vorhandenen Bibliographiestile anzupassen oder eigene Stile zu schreiben. 
+Biblatex unterstützt auch unterteilte Bibliographien, mehrere Bibliographien innerhalb 
+eines Dokuments und separate Listen bibliographischer Abkürzungen (Sigelverzeichnisse).
+
 Spezialitäten
 =============
 
