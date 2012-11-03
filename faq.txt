@@ -79,6 +79,7 @@ Nicht jede offene Frage kann in diesen FAQ beantwortet werden. Weitere Quellen f
 - Die [Newsgruppe](https://de.wikipedia.org/wiki/Usenet) [de.comp.text.tex](https://groups.google.com/forum/#!forum/comp.text.tex)
 - Das Forum [LaTeX Community](http://latex-community.org/)
 
+Weiterhin gibt es noch diverse Blogs über TeX & friends, die unter <http://planet.dante.de/> gesammelt sind.
 
 Äußere Erscheinung der Dokumente
 ================================
@@ -158,6 +159,7 @@ Die *Deutschsprachige Anwendervereinigung TeX e. V.*, kurz DANTE, hat es sich zu
 Warum soll ich Mitglied werden?
 -------------------------------
 
+- DANTE fördert eine Reihe von Projekten im TeX-Umfeld. Beispielsweise wird die Weiterentwicklung freier Schriftarten (auch zusammen mit anderen TeX-Benutzergruppen) finanziert. DANTE übernimmt die Kosten für den deutschen CTAN Knoten, der TeX Software sammelt und so erst Distributionen wie TeXlive ermöglicht.
 - Vereinszeitung [*Die technische Komödie*](http://www.dante.de/DTK.html)
 - Tagungen und Stammtische
 - …
