@@ -3,6 +3,7 @@
 % 2012-11-02
 
 ----
+<!-- Autoren bitte unten eintragen -->
 
 Allgemeines
 ===========
@@ -64,8 +65,19 @@ Wo bekomme ich Hilfe?
 
 Nicht jede offene Frage kann in diesen FAQ beantwortet werden. Weitere Quellen für Informationen und Hilfe rund um TeX sind:
 
-- die Mailingliste `tex-d-l` <!-- (Link? Beschreibung?) -->
-- [LaTeX Stack Exchange](http://tex.stackexchange.com/)
+### Deutsch
+
+- Die [Mailingliste](https://de.wikipedia.org/wiki/Mailingliste) »tex-d-l«. Archiv und Eintragen unter <http://www.listserv.dfn.de/archives/tex-d-l.html>
+- Das Webforum [golatex](http://www.golatex.de/): <http://www.golatex.de/>
+- Das LaTeX Forum bei [mrunix.de](http://mrunix.de/forums/forumdisplay.php?f=38): <http://mrunix.de/forums/forumdisplay.php?f=38>
+- Hilfen speziell für KOMA-Script: <http://www.komascript.de/>
+- Die [Newsgruppe](https://de.wikipedia.org/wiki/Usenet): [de.comp.text.tex](https://groups.google.com/forum/#!forum/de.comp.text.tex)
+
+### Englisch
+
+- [TeX Stack Exchange](http://tex.stackexchange.com/)
+- Die [Newsgruppe](https://de.wikipedia.org/wiki/Usenet) [de.comp.text.tex](https://groups.google.com/forum/#!forum/comp.text.tex)
+- Das Forum [LaTeX Community](http://latex-community.org/)
 
 
 Äußere Erscheinung der Dokumente
@@ -165,6 +177,7 @@ Ergänzungen und Korrekturen bitte an <info@texfragen.de> senden oder direkt im 
 
 Autoren
 -------
+Patrick Gundlach
 
 Lizenz dieser FAQ
 -----------------
