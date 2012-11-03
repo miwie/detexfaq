@@ -24,7 +24,7 @@ Um TeX, LaTeX und Co. verwenden zu können, braucht man eine sogenannte **TeX-Di
 
 ### Linux
 
-Die meisten Linux-Distributionen bieten über die Paketverwaltung eine TeX-Live-Installation an. (Das entsprechende Paket heißt in allen gängige Distributionen `texlive`.) Für den Einstieg ist diese vollkommen ausreichend. Erfahrene Benutzer können TeX Live manuell aus anderen Quellen installieren, um immer eine aktuelle Version zu haben.
+Die meisten Linux-Distributionen bieten über die Paketverwaltung eine TeX-Live-Installation an. (Das entsprechende Paket heißt in allen gängigen Distributionen `texlive`.) Für den Einstieg ist diese vollkommen ausreichend. Erfahrene Benutzer können TeX Live manuell aus anderen Quellen installieren, um immer eine aktuelle Version zu haben.
 
 ### Windows
 
@@ -123,7 +123,7 @@ Was sind BibTeX und biber?
 
 Was ist biblatex?
 -----------------
-Biblatex ist ein Makropaket zum Erstellen von Literaturverzeichnissen mit LaTeX und 
+[Biblatex](http://mirror.ctan.org/macros/latex/contrib/biblatex/) ist ein Makropaket zum Erstellen von Literaturverzeichnissen mit LaTeX und 
 BibTeX, das bereits mehrere Zitierstile enthält und eine hohe Flexibilität aufweist. 
 Das Paket wurde im August 2006 von Philipp Lehman erstmals vorgestellt. Seit der Version 
 0.9 ist es auch in den gängigen TeX-Distributionen wie MiKTeX oder TeX Live enthalten. 
@@ -180,6 +180,7 @@ Ergänzungen und Korrekturen bitte an <info@texfragen.de> senden oder direkt im 
 Autoren
 -------
 Patrick Gundlach
+Dominik Waßenhoven
 
 Lizenz dieser FAQ
 -----------------
