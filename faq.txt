@@ -180,6 +180,7 @@ Ergänzungen und Korrekturen bitte an <info@texfragen.de> senden oder direkt im 
 Autoren
 -------
 Patrick Gundlach
+
 Dominik Waßenhoven
 
 Lizenz dieser FAQ
