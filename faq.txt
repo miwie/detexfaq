@@ -1,9 +1,9 @@
-% TeX FAQ
+% TeX FAQ (im Aufbau)
 % Patrick Gundlach;
 % 2012-11-02
+<!-- Autoren bitte unten eintragen -->
 
 ----
-<!-- Autoren bitte unten eintragen -->
 
 Allgemeines
 ===========
@@ -15,7 +15,7 @@ TeX ist eine Software zur **Formatierung von Texten**. Der Unterschied zu andere
 
 Die Ausgabedatei im PDF-Format kann dann mit jedem Rechner problemlos betrachtet werden. Die Darstellung ist auf jedem Rechner gleich. Es drohen keine Darstellungsprobleme oder Versionskonflikte.
 
-Außerdem kann man TeX auch als Programmiersprache verwenden und bestimmte Dinge vereinfachen. Zum Beispiel unterstüzt LaTeX von Haus aus automatische Gliederungsbefehle, die dann bei Bedarf individuell angepasst werden können.
+Außerdem kann man TeX auch als Programmiersprache verwenden und bestimmte Dinge vereinfachen. Zum Beispiel unterstützt LaTeX von Haus aus automatische Gliederungsbefehle, die dann bei Bedarf individuell angepasst werden können.
 
 Wie installiere ich TeX?
 ------------------------
@@ -24,7 +24,7 @@ Um TeX, LaTeX und Co. verwenden zu können, braucht man eine sogenannte **TeX-Di
 
 ### Linux
 
-Die meisten Linux-Distributionen bieten über die Paketverwaltung eine TeX-Live-Installation an. (Das entsprechende Paket heißt in allen gänginge Distributionen `texlive`.) Für den Einstieg ist diese vollkommen ausreichend. Erfahrene Benutzer können TeX Live manuell aus anderen Quellen installieren, um immer eine aktuelle Version zu haben.
+Die meisten Linux-Distributionen bieten über die Paketverwaltung eine TeX-Live-Installation an. (Das entsprechende Paket heißt in allen gängige Distributionen `texlive`.) Für den Einstieg ist diese vollkommen ausreichend. Erfahrene Benutzer können TeX Live manuell aus anderen Quellen installieren, um immer eine aktuelle Version zu haben.
 
 ### Windows
 
@@ -175,7 +175,7 @@ Der Mitgliedsantrag kann einfach [online auf dante.de](http://www.dante.de/index
 Über diese FAQ
 ===============
 
-Ergänzungen und Korrekturen bitte an <info@texfragen.de> senden oder direkt im [Github-Archiv](https://github.com/texdoc/detexfaq) unter <https://github.com/texdoc/detexfaq> ergänzen. [Pull requests](https://help.github.com/articles/using-pull-requests) sind immer gerne gesehen. Die offizielle Seite ist <http://www.texfragen.de>.
+Ergänzungen und Korrekturen bitte an <info@texfragen.de> senden oder direkt im [Github-Archiv](https://github.com/texdoc/detexfaq) unter <https://github.com/texdoc/detexfaq> ergänzen. [Pull requests](https://help.github.com/articles/using-pull-requests) sind immer gerne gesehen. Die offizielle Seite ist <http://texfragen.de>.
 
 Autoren
 -------
