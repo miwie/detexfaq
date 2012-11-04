@@ -32,7 +32,7 @@ Die einfachste Möglichkeit, TeX unter Windows zu installieren, ist MiKTeX. Auf 
 
 ### Mac OS X
 
-Für Mac OS X gibt es eine Distribution, die auf TeXlive aufbaut: [The MacTeX-2012 Distribution](http://tug.org/mactex/). Erfahrene Anwender könne auch über die Kommandozeile TeXlive installieren. 
+Für Mac OS X gibt es eine Distribution, die auf TeXlive aufbaut: [The MacTeX-2012 Distribution](http://tug.org/mactex/). Erfahrene Anwender können auch über die Kommandozeile TeXlive installieren. 
 
 Achtung: Es gibt noch vereinzelt Hinweise im Netz, die den den i-Installer empfehlen. Dieser wird aber nicht mehr weiter entwickelt.
 
@@ -89,7 +89,7 @@ Nicht jede offene Frage kann in diesen FAQ beantwortet werden. Weitere Quellen f
 ### Englisch
 
 - [TeX Stack Exchange](http://tex.stackexchange.com/)
-- Die [Newsgruppe](https://de.wikipedia.org/wiki/Usenet) [de.comp.text.tex](https://groups.google.com/forum/#!forum/comp.text.tex)
+- Die [Newsgruppe](https://de.wikipedia.org/wiki/Usenet) [comp.text.tex](https://groups.google.com/forum/#!forum/comp.text.tex)
 - Das Forum [LaTeX Community](http://latex-community.org/)
 
 Weiterhin gibt es noch diverse Blogs über TeX & friends, die unter <http://planet.dante.de/> gesammelt sind.
@@ -131,10 +131,33 @@ Wie kann ich Tabellen und Abbildungen in der Nähe des Aufrufs behalten?
 Bibliographien und Literaturverweise
 ====================================
 
-Was sind BibTeX und biber?
+Was ist BibTeX?
 --------------------------
-- bibtex-Programm (und bibtex8)
+BibTeX ist ein Programm, mit dem man Literaturverweise und Bibliographien erstellen kann. 
+Es benutzt dazu »Anker« (`\cite`-Befehle) in einem LaTeX-Dokument, die es zunächst sammelt 
+und in einem zweiten Schritt die dazugehörigen Daten aus einer separaten Datei mit der 
+Endung `.bib` entnimmt. Die Darstellung der Verweise und des Literaturverzeichnisses lässt 
+sich durch `bst`-Dateien beeinflussen (`bst` steht für »bibliography style«). Es gibt
+eine Reihe von Bibliographiestilen, die unterschiedliche Vorgaben erfüllen. Eine Auswahl 
+davon kann man sich anhand von Beispielen auf der Seite [BibTeX style examples](http://www.cs.stir.ac.uk/~kjt/software/latex/showbst.html)
+anschauen. Die Anpassung von Bibliographiestilen ist nicht gerade trivial, da sie in einer 
+Programmiersprache abgefasst sind, die in Form einer Stackmaschine mit nur wenigen 
+Befehlen funktioniert ([Umgekehrte Polnische Notation](http://de.wikipedia.org/wiki/Umgekehrte_Polnische_Notation)).
+
+BibTeX wurde 1988 geschrieben (bis Version 0.99c) und 2010 aktualisiert (Version 0.99d). 
+
+- kurz etwas zu den Beschränkungen
+- bibtex8
+- bibtexu
+
+Was ist biber?
+--------------
+
 - biber als Nachfolger von bibtex (dem Programm)
+
+Was sind `.bib`-Dateien?
+------------------------
+
 - BibTeX-Syntax (.bib-Dateien)
 
 Was ist biblatex?
