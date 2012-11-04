@@ -184,7 +184,18 @@ Mathematiksatz
 ==============
  
 Warum soll ich `\[...\]` anstelle von `$$...$$` benutzen?
+---------------------------------------------------------
+
+Welche Regelungen zum Mathematiksatz kann ich heranziehen?
 ----------------------------------------------------------
+ISO, EN
+
+
+Wie kann ich einen aufrechten Differentialoperator erzeugen?
+------------------------------------------------------------
+\newcommand*\diff{\mathop{}\!\mathrm{d}}
+Quelle: H. Voß Mathematiksatz 2. Aufl. S. 76
+
 
 
 DANTE
