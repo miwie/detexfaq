@@ -11,7 +11,7 @@ Allgemeines
 Was ist TeX?
 ------------
 
-TeX ist eine Software zur **Formatierung von Texten**. Der Unterschied zu anderen Textverarbeitungssystem wie Word und OpenOffice.org ist, dass aus einer TeX-Datei, die vom Anwender erstellt wird, eine PDF-Datei generiert wird. Die ursprüngliche TeX-Datei wird mit einem Texteditor bearbeitet. Hierbei können verschiedene Befehle zur Gestaltung des Textes verwendet werden.
+TeX (gesprochen: Tech) ist eine Software zur **Formatierung von Texten**. Der Unterschied zu anderen Textverarbeitungssystem wie Word und OpenOffice.org ist, dass aus einer TeX-Datei, die vom Anwender erstellt wird, eine PDF-Datei generiert wird. Die ursprüngliche TeX-Datei wird mit einem Texteditor bearbeitet. Hierbei können verschiedene Befehle zur Gestaltung des Textes verwendet werden.
 
 Die Ausgabedatei im PDF-Format kann dann mit jedem Rechner problemlos betrachtet werden. Die Darstellung ist auf jedem Rechner gleich. Es drohen keine Darstellungsprobleme oder Versionskonflikte.
 
@@ -30,35 +30,48 @@ Die meisten Linux-Distributionen bieten über die Paketverwaltung eine TeX-Live-
 
 Die einfachste Möglichkeit, TeX unter Windows zu installieren, ist MiKTeX. Auf der [MiKTeX-Homepage](http://miktex.org/download) steht ein Installer zum Download bereit.
 
-<!--
-### MacOS
+### Mac OS X
 
-???
--->
+Für Mac OS X gibt es eine Distribution, die auf TeXlive aufbaut: [The MacTeX-2012 Distribution](http://tug.org/mactex/). Erfahrene Anwender könne auch über die Kommandozeile TeXlive installieren. 
+
+Achtung: Es gibt noch vereinzelt Hinweise im Netz, die den den i-Installer empfehlen. Dieser wird aber nicht mehr weiter entwickelt.
+
+Hilfe für TeX unter Mac OS X gibt es in der englischsprachigen Mailingliste »MacOSX-TeX«, die auf der Hilfe Seite unter <http://tug.org/mactex/help/> verlinkt ist.
 
 Wie fange ich an, wenn ich LaTeX lernen möchte?
 -----------------------------------------------
 
-* l2kurz, Bücher
+Mit jeder TeX-Distribution wird eine große Menge an Dokumentation mitgeliefert. Diese sind jedoch oft sehr speziell und daher nicht wirklich geeignet, um LaTeX zu lernen. Zum Einstieg bietet sich ein kostenloses Dokument »l2kurz.pdf« an, das unter <http://mirror.ctan.org/info/lshort/german/l2kurz.pdf> bzw. in der Distribution über den Kommandozeilenbefehl `texdoc l2kurz` aufgerufen werden kann.
+
+Weiterhin gibt es eine schier unüberschaubare Menge an Literatur zu LaTeX. In der alten FAQ gibt es [eine ausführliche Literaturliste](http://projekte.dante.de/DanteFAQ/Literatur): <http://projekte.dante.de/DanteFAQ/Literatur>
 
 
 Worin liegt der Unterschied zwischen TeX, LaTeX und ConTeXt?
 ----------------------------------------------------------
 
-* TeX ist die Grundlage, LaTeX und ConTeXt bieten sowas wie `\section{}` und `\tableofcontents`. Anfänger machen lieber LaTeX, weil es mehr deutschsprachige Literatur dazu gibt.
+TeX ist die Grundlage aller Erweiterungen. Es bietet nur recht einfache Programmierbefehle, um Texte zu setzen. 
+
+LaTeX und ConTeXt nutzen diese einfachen Befehle, um für den Benutzer eine wesentlich bequemere Schnittstelle zur Verfügung zu stellen. So bieten die sogenannten »Formate« LaTeX und ConTeXt einen Befehl
+`\section{...}`, um einen neuen Abschnitt einzuleiten. Intern werden dann TeX-Befehle ausgeführt um die Schriftart beispielsweise auf 12 Punkt Fett umzuschalten, einen Abstand vorher und nachher einzufügen, gegebenenfalls eine neue Seite zu beginnen, eine Abschnittsnummer vor die Überschrift zu setzen sowie einen Eintrag in das Inhaltsverzeichnis einzufügen. Das erspart dem Anwender viel mühselige Arbeit und ermöglicht es, das Layout zentral zu steuern.
+
+Anfänger greifen in der Regel auf das Format »LaTeX« zurück, da es dafür mehr deutschsprachige Literatur gibt. Auch behandelt diese FAQ größtenteils dieses Format. Sofern nicht anders angegeben, beziehen sich alle Fragen darauf.
 
 Was sind PDFTeX, LuaTeX und XeTeX?
 ---------------------------------
 
-* Engines, also Grundlagen wo TeX, LaTeX und ConTeXt laufen
+PDFTeX, LuaTeX und XeTeX sind sogenannte »engines«, also die Maschinen, die die oben genannten TeX Formate ausführen. Beispielsweise läuft LaTeX sowohl unter PDFTeX, als auch unter LuaTeX und XeTeX. Jedes dieser Programme hat seine Vor- und Nachteile. PDFTeX ist der direkte Nachfolger von dem originalen TeX von D.E. Knuth (dem ursprünglichen Entwickler von TeX), aber um die Möglichkeit erweitert, direkt PDF anstelle dem TeX eigenen DVI Format auszugeben. PDFTeX ist vermutlich derzeit die am meisten eingesetzte »engine«. Es gibt mehrere Nachfolger von PDFTeX, von denen XeTeX und LuaTeX die wichtigsten sind. Beide können mit OpenType Schriftarten und Unicode (UTF-8) problemlos umgehen. Unterschiedlich ist, wie diese beiden Programme intern arbeiten. Derzeit ist XeTeX wohl etwas stabiler als LuaTeX, die Erweiterbarkeit von LuaTeX wird aber vermutlich XeTeX mittelfristig ablösen. 
 
 
-Wie bearbeite ich TeX Dokumente?
+
+Wie bearbeite ich LaTeX Dokumente?
 --------------------------------
 
-* Normaler Texteditor, kein Word oder ähnliches
-* TeX Editoren, siehe <http://tex.stackexchange.com/questions/339/latex-editors-ides>
-* Scientific Wordplace? Lyx?
+LaTeX Dokumente sind normale Textdateien, im Gegensatz zu Dateien von Textverarbeitungen wie Microsoft Word oder Libre Office, die noch sehr viel mehr Informationen in den Dateien speichern. Diese normalen Textdateien (meist mit der Dateiendung `.tex`) können im Prinzip mit jedem Texteditor bearbeitet werden (siehe dazu den [Artikel in der Wikipedia](http://de.wikipedia.org/wiki/Texteditor): <http://de.wikipedia.org/wiki/Texteditor>). Es bieten sich spezielle Editoren für LaTeX an. Es gibt hier im Prinzip zwei Arten. Einerseits die *normalen* Texteditoren wie Emacs oder Textmate, die um LaTeX Fähigkeiten erweitert werden. Andererseits gibt es Editoren wie TeXnicCenter, die speziell für den Einsatz mit LaTeX konstruiert wurden.
+
+Neben diesen Texteditoren gibt es noch spezielle Anwendungen wie Lyx oder Scientific WorkPlace, die die TeX-Befehle sofort grafisch darstellen, meist aber in einer »so ungefähr könnte es später aussehen« Vorschau. 
+
+Einen Vergleich der LaTeX Editoren gibt es beispielsweise auf tex.stackexchange.com unter <http://tex.stackexchange.com/questions/339/latex-editors-ides>.
+
 
 Wo bekomme ich Hilfe?
 ---------------------
@@ -97,8 +110,11 @@ Schriftarten
 Ich benötige ein spezielles Symbol in meinem Dokument. Wie kann ich es finden?
 ------------------------------------------------------------------------------
 
-* [Detextify](http://detexify.kirelabs.org/classify.html)
-* [Comprehensive LaTeX symbols list](http://www.ctan.org/tex-archive/info/symbols/comprehensive/symbols-a4.pdf)
+Meist kann man nur in einem Handbuch nach dem Befehl suchen, der ein spezielles Symbol erzeugt. Hilfreich hat sich das Dokument »Comprehensive LaTeX symbols list« erwiesen, das unter <http://texdoc.net/pkg/symbols-a4.pdf> oder mithilfe der Kommandozeile `texdoc symbols-a4` zu lesen ist. 
+
+Daneben gibt es noch einen prima Webdienst, [Detextify](http://detexify.kirelabs.org/classify.html). Hier zeichnet man mit der Maus auf einer Webseite ein Symbol, das man sucht und bekommt den Befehl zurück.
+
+![Bei detexify.org kann man ein Symbol malen und man erhält den passenden latex Befehl dazu](img/detexify.png)
 
 
 Abbildungen und Gleitumgebungen
@@ -160,9 +176,11 @@ Warum soll ich Mitglied werden?
 -------------------------------
 
 - DANTE fördert eine Reihe von Projekten im TeX-Umfeld. Beispielsweise wird die Weiterentwicklung freier Schriftarten (auch zusammen mit anderen TeX-Benutzergruppen) finanziert. DANTE übernimmt die Kosten für den deutschen CTAN Knoten, der TeX Software sammelt und so erst Distributionen wie TeXlive ermöglicht.
-- Vereinszeitung [*Die technische Komödie*](http://www.dante.de/DTK.html)
-- Tagungen und Stammtische
-- …
+- Vereinszeitung [*Die TeXnische Komödie*](http://www.dante.de/DTK.html) erscheint viermal im Jahr und enthält viele exzellente Artikel rund um TeX.
+- Als Mitglied kann man günstiger an Tagungen teilnehmen und erhält immer aktuelle Informationen zu den Veranstaltungen und Stammtischen.
+- Es gibt eine Reihe Vergünstigungen, beispielsweise bei den Büchern der DANTE-Edition und für die WinEdt Lizenz.
+- Die aktuellen TeX Distributionen und CTAN Abzüge werden meist jährlich auf DVD an die Mitglieder verschickt.
+
 
 Wie werde ich Mitglied?
 -----------------------
@@ -179,9 +197,10 @@ Ergänzungen und Korrekturen bitte an <info@texfragen.de> senden oder direkt im 
 
 Autoren
 -------
-Patrick Gundlach
+<!-- mit Komma siehts vielleicht besser aus? -->
 
-Dominik Waßenhoven
+Patrick Gundlach, Dominik Waßenhoven
+
 
 Lizenz dieser FAQ
 -----------------
