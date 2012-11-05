@@ -76,7 +76,7 @@ Einen Vergleich der LaTeX Editoren gibt es beispielsweise auf tex.stackexchange.
 Wo bekomme ich Hilfe?
 ---------------------
 
-Nicht jede offene Frage kann in diesen FAQ beantwortet werden. Weitere Quellen für Informationen und Hilfe rund um TeX sind:
+Weitere Quellen für Informationen und Hilfe rund um TeX sind:
 
 ### Deutsch
 
