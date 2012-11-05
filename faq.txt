@@ -108,6 +108,28 @@ Ränder
 Schriftarten
 ------------
 
+### Wie ändere ich die Schriftart in meinem Dokument?
+
+Es gibt mehrere Möglichkeiten, die Schriftart in einem Dokument zu ändern. Für manche Schriftarten werden Pakete gepflegt, die über `\usepackage` eingebunden werden können. Eine Übersicht über diese Pakete findet sich im [LaTeX Font Catalogue](http://www.tug.dk/FontCatalogue/) unter <http://www.tug.dk/FontCatalogue/>. Dort steht auch jeweils, wie die Schrift eingebunden werden kann.
+
+Wenn statt einer Serifenschrift eine serifenlose Schrift als Standard verwendet werden soll, kann der Befehl
+
+    \renewcommand{\familydefault}{\sfdefault}
+
+verwendet werden.
+
+Bei der Verwendung von XeTeX kann jede im System installierte Schriftart verwendet werden. Hierfür dienen die Befehle `\setmainfont`, `\setsansfont` und `\setmonofont`:
+
+    \setmainfont[Mapping=tex-text]{Linux Libertine O}
+    \setsansfont[Mapping=tex-text]{Source Sans Pro}
+    \setmonofont[Mapping=tex-text]{Source Code Pro}
+    
+### Wie ändere ich die Schriftgröße in meinem Dokument?
+
+Um die Schriftgröße zu verändern, kann man zum einen die Befehle `\small`, `\large`, `\huge` etc. verwendet werden, mit denen einzelne Worte, Sätze, Bereiche größer oder kleiner gesetzt werden. Bei der Verwendung von KOMA-Script-Klassen kann die Schriftgröße global über das Argument `fontsize` geändert werden, zum Beispiel:
+
+    \documentclass[fontsize=12pt]{scrartcl}
+
 Ich benötige ein spezielles Symbol in meinem Dokument. Wie kann ich es finden?
 ------------------------------------------------------------------------------
 
