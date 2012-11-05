@@ -162,7 +162,7 @@ Was sind `.bib`-Dateien?
 
 Was ist biblatex?
 -----------------
-[Biblatex](http://mirror.ctan.org/macros/latex/contrib/biblatex/) ist ein Makropaket zum Erstellen von Literaturverzeichnissen mit LaTeX und 
+[Biblatex](http://mirror.ctan.org/help/Catalogue/entries/biblatex.html) ist ein Makropaket zum Erstellen von Literaturverzeichnissen mit LaTeX und 
 BibTeX, das bereits mehrere Zitierstile enthält und eine hohe Flexibilität aufweist. 
 Das Paket wurde im August 2006 von Philipp Lehman erstmals vorgestellt. Seit der Version 
 0.9 ist es auch in den gängigen TeX-Distributionen wie MiKTeX oder TeX Live enthalten. 
@@ -173,6 +173,8 @@ Formatierungen werden dagegen mit LaTeX-Befehlen vorgenommen, was es einfacher m
 die vorhandenen Bibliographiestile anzupassen oder eigene Stile zu schreiben. 
 Biblatex unterstützt auch unterteilte Bibliographien, mehrere Bibliographien innerhalb 
 eines Dokuments und separate Listen bibliographischer Abkürzungen (Sigelverzeichnisse).
+
+Es gibt auch eine [deutsche Übersetzung der biblatex-Dokumentation](http://mirror.ctan.org/help/Catalogue/entries/translation-biblatex-de.html).
 
 Spezialitäten
 =============
