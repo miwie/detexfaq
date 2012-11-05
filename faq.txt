@@ -237,7 +237,7 @@ Autoren
 -------
 <!-- mit Komma siehts vielleicht besser aus? -->
 
-Patrick Gundlach, Dominik Waßenhoven
+Patrick Gundlach, Jonas Stein, Dominik Waßenhoven
 
 
 Lizenz dieser FAQ
