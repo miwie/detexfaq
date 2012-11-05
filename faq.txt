@@ -196,6 +196,7 @@ ISO, EN
 Wie kann ich einen aufrechten Differentialoperator erzeugen?
 ------------------------------------------------------------
 \newcommand*\diff{\mathop{}\!\mathrm{d}}
+FIXME: Warum sieht man obiges nicht?
 Quelle: H. Voß Mathematiksatz 2. Aufl. S. 76
 
 
