@@ -66,7 +66,7 @@ PDFTeX, LuaTeX und XeTeX sind sogenannte »engines«, also die Maschinen, die di
 Wie bearbeite ich LaTeX Dokumente?
 --------------------------------
 
-LaTeX Dokumente sind normale Textdateien, im Gegensatz zu Dateien von Textverarbeitungen wie Microsoft Word oder Libre Office, die noch sehr viel mehr Informationen in den Dateien speichern. Diese normalen Textdateien (meist mit der Dateiendung `.tex`) können im Prinzip mit jedem Texteditor bearbeitet werden (siehe dazu den [Artikel in der Wikipedia](http://de.wikipedia.org/wiki/Texteditor): <http://de.wikipedia.org/wiki/Texteditor>). Es bieten sich spezielle Editoren für LaTeX an. Es gibt hier im Prinzip zwei Arten. Einerseits die *normalen* Texteditoren wie Emacs oder Textmate, die um LaTeX Fähigkeiten erweitert werden. Andererseits gibt es Editoren wie TeXnicCenter, die speziell für den Einsatz mit LaTeX konstruiert wurden.
+LaTeX Quellcode wird in reinen Textdateien gespeichert. Sie können im Prinzip mit jedem Texteditor bearbeitet werden (siehe dazu den [Artikel in der Wikipedia](http://de.wikipedia.org/wiki/Texteditor): <http://de.wikipedia.org/wiki/Texteditor>). Es bieten sich spezielle Editoren für LaTeX an. Es gibt hier im Prinzip zwei Arten. Einerseits die *normalen* Texteditoren wie Emacs oder Textmate, die um LaTeX Fähigkeiten erweitert werden. Andererseits gibt es Editoren wie TeXnicCenter, die speziell für den Einsatz mit LaTeX konstruiert wurden. Als Dateiendung hat sich `.tex` etabliert
 
 Neben diesen Texteditoren gibt es noch spezielle Anwendungen wie Lyx oder Scientific WorkPlace, die die TeX-Befehle sofort grafisch darstellen, meist aber in einer »so ungefähr könnte es später aussehen« Vorschau. 
 
