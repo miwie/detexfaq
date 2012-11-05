@@ -91,6 +91,7 @@ Weitere Quellen für Informationen und Hilfe rund um TeX sind:
 - [TeX Stack Exchange](http://tex.stackexchange.com/)
 - Die [Newsgruppe](https://de.wikipedia.org/wiki/Usenet) [comp.text.tex](https://groups.google.com/forum/#!forum/comp.text.tex)
 - Das Forum [LaTeX Community](http://latex-community.org/)
+- Die Anleitung zu einem Paket X, welches mit \usepackage[]{X} eingebunden wird kann sowohl unter Windows, als auch unter Linux in einer Konsole mit texdoc X geöffnet werden.
 
 Weiterhin gibt es noch diverse Blogs über TeX & friends, die unter <http://planet.dante.de/> gesammelt sind.
 
