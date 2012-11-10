@@ -1,6 +1,6 @@
 % TeX FAQ (im Aufbau)
 % Patrick Gundlach;
-% 2012-11-02
+% 2012-11-05
 <!-- Autoren bitte unten eintragen -->
 
 ----
