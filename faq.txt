@@ -205,6 +205,246 @@ Spezialitäten
 Was machen `\makeatletter` und `\makeatother`?
 ---------------------------------------------
 
+Wie erstelle ich eine Nomenklatur/ Abkürzungsverzeichnis/ Formelzeichenverzeichnis?
+-----------------------------------------------------------------------------------
+
+Es gibt mehrere Pakete die sich mit dem Erstellen der oben genannten
+Verzeichnisse beschäftigen. Die bekanntesten sind nomencl und glossaries. Das
+glossary Paket ist veraltet und sollte nicht mehr verwendet werden.
+
+Das nomencl Paket ist nur zu empfehlen wenn man nur eines der genannten
+Verzeichnisse erstellen möchte. Wer eine Kombination von Verzeichnissen
+benötigt, also z.B. Abkürzungs- und Formelzeichenverzeichnis, der ist besser
+mit dem glossaries Paket beraten da sich dieses leichter konfigurieren lässt.
+
+Beide Pakete haben den gleichen Grundansatz:
+
+Man definiert Begriffe, Formelzeichen o.ä. mit einem vom Paket
+bereitgestellten Befehl. Beim Kompilieren mit (pdf)latex werden diese Befehle
+erkannt, gesammelt und in eine neue Datei geschrieben. Zum Sortieren der
+Einträge wird dann makeindex aufgerufen. Makeindex ist ein externes Programm
+das sowohl MikTeX als auch TeXlive standardmäßig beiliegt.
+
+Makeindex liest die Datei in der die Begriffe gesammelt wurden ein,sortiert diese und schreibt erneut eine Datei mit den sortierten Begriffen und eventuellen Sonderinformationen wie z.B. die Seiten auf denen der Begriff verwendet wurde.
+
+Nomencl und glossaries benötigen einen spezifischen Aufruf von makeindex der
+in der Regel im Editor nicht voreingestellt ist. Dies ist eine häufige
+Fehlerquelle. Mehr zum Aufruf von makeindex ist in den unterstehenden
+Beispielen zu finden.
+
+### glossaries
+
+#### Ein Verzeichnis (Beispiel: Glossar)
+
+Glossaries hat ein Standardverzeichnis 'main' das man z.B. als Glossar direkt verwenden kann.
+
+    %Datei glossarbsp.tex
+    \documentclass{article}
+    \usepackage[T1]{fontenc}
+    \usepackage{glossaries}
+    \makeglossaries
+    
+    %Begriffdefinition
+    \newglossaryentry{apf}{name=Apfel,  
+    description={Ost aus der Gruppe der Kernobstgewächse}} 
+    
+    \begin{document}
+    
+    %Verwendung des Labels, wird im Text als 'Apfel' angezeigt.
+    \gls{apf}
+    
+    %Ausgabe mit gewünschter Verzeichnisüberschrift
+    \printglossary[title=Glossar]
+    
+    \end{document}
+
+Folgende Kompilierreihenfolge ist einzuhalten:
+1) pdf(latex)
+2) makeindex
+3) (pdf)latex
+
+Für den makindex Aufruf hat man nun zwei Möglichkeiten. Expliziter Aufruf oder
+Aufruf über das mitgelieferte Perl-Skript.  Tipp: Der Aufruf per Skript ist
+auf jeden Fall zu empfehlen wenn man mehrere Verzeichnisse möchte.
+
+1) Explizit:
+Am einfachsten ist der Aufruf in einem Terminal. (Zur Vereinfachung lässt sich dieser Schritt auch im Editor als Prozedur einrichten)
+
+Windows: 
+Start ->Programme ->Zubehör -> Eingabeaufforderung
+Von dort aus in das Projektverzeichnis in dem `glossarbsp.tex` liegt navigieren.
+
+Im Verzeichnis dann folgenden Befehl ausführen:
+    makeindex -s glossarbsp.ist -t glossarbsp.glg -o glossarbsp.gls glossarbsp.glo 
+
+Linux:
+Ein Terminal öffnen (z.B. Strg+Alt+T drücken).
+Von dort aus in das Projektverzeichnis in dem `glossarbsp.tex` liegt navigieren.
+
+Im Verzeichnis dann folgenden Befehl ausführen:
+    makeindex -s glossarbsp.ist -t glossarbsp.glg -o glossarbsp.gls glossarbsp.glo 
+
+2) Perl-Skript
+Glossaries bringt ein Perl-Skript mit welches den Aufruf von makeindex stark vereinfacht
+
+Windows:
+Es wird ein installierter Perl Interpreter benötigt. Kostenlos ist z.B. Active Perl.
+
+Start ->Programme ->Zubehör -> Einbageaufforderung
+Von dort aus in das Projektverzeichnis in dem `glossarbsp.tex` liegt navigieren.
+
+Im Verzeichnis dann folgenden Befehl ausführen:
+    makeglossaries glossarbsp
+
+Linux:
+Ein Terminal öffnen (z.B. Strg+Alt+T drücken).
+Von dort aus in das Projektverzeichnis in dem `glossarbsp.tex` liegt navigieren.
+
+Im Verzeichnis dann folgenden Befehl ausführen:
+    makeglossaries glossarbsp
+
+
+
+
+#### Mehrere Verzeichnisse (Beispiel: Glossar, Abkürzungen, Formelzeichen)
+
+Ein Glossar wird mit dem Standardverzeichnistyp 'main' erstellt. Per Option wird außerdem ein Abkürzungsverzeichnis erstellt
+
+    \usepackage[acronym]{glossaries}
+
+Um auch noch ein Formelzeichen-Verzeichnis zu bekommen, muss ein neuer Eintragtyp definiert werden. 
+
+    \newglossary[fog]{formel}{foi}{foo}{Formelzeichen} 
+
+`foi` und `foo` sind hierbei die Dateiendungen die die neuen Dateien erhalten die im laufe des Kompilierens erstellt werden, `fog` ist der Name der log-Datei.
+
+Bei Formelzeichen merkt man schnell, dass man mit den vorhandenen Eintragtypen nicht auskommt. Denn ein Zeichen hat einen Namen (name=), eine Beschreibung (description=) ein mathematisches Symbol (symbol=) aber oft auch eine Einheit. Dafür kann man einen der user-Einträge verwenden.
+
+    \newglossaryentry{dichte}{
+    name=Dichte,  
+    description={Verhältnis von Gewicht zu Volumen},
+    symbol={$\rho$},
+    type=formel,
+    user1={kg/m3}
+    } 
+
+Erstellt man nun das Verzeichnis stellt man fest, dass die Einheit nicht mit ausgegeben wird. Das liegt daran, dass glossaries nicht weiß wo es diesen Eintrag darstellen soll. Deshalb muss man einen eigenen 'style' bemühen der diesen Eintrag mit anzeigt. Hier im Beispiel wird eine longtable-Tabelle verwendet. Der Stil wird unter eigenem Namen als 'mytab' abgespeichert. Bei der Ausgabe wird dann mit `style=mytab` explizit der Stil des Verzeichnisses angegeben. Möchte man im `symbol=` mathematischen Zeichen angeben, muss außerdem dem Paket die Option `sanitize={symbol=false}` mitgegeben werden.
+
+    \documentclass{article}
+    \usepackage[T1]{fontenc}
+    \usepackage{longtable}
+    
+    \usepackage[acronym,sanitize={symbol=false}]{glossaries}
+    
+    %Neuer Eintragstyp
+    \newglossary[fog]{formel}{foi}{foo}{Formelzeichen} 
+    
+    %Ein neuer Verzeichnisstil der auch die Einheit mit ausgibt
+    \newglossarystyle{mytab}{%  
+     % Verzeichnis wird ein 'longtable'  mit 5 Spalten
+     \renewenvironment{theglossary}%  
+      {\begin{longtable}{lccp{\glsdescwidth}p{\glspagelistwidth}}}%  
+      {\end{longtable}}%  
+     % Kopf der Tabelle
+     \renewcommand*{\glossaryheader}{%  
+      \bfseries Name & \bfseries Symbol & \bfseries Einheit &  %
+      \bfseries Bescheibung & \bfseries Seite(n)  %
+      \\\endhead}%  
+     % Kein Abstand zwischen Gruppen 
+      \renewcommand*{\glsgroupheading}[1]{}% 
+        %    
+      \renewcommand*{\glossaryentryfield}[5]{%  
+     %   \glsentryitem{##1}% Entry number if required  
+        \glstarget{##1}{##2}% Name 
+            & ##4 %Symbol
+            & \glsentryuseri{##1}%Einheit
+        & ##3% Description  
+        & ##5% Page list  
+        \\% end of row  
+      }% 
+    }
+    \makeglossaries
+    
+    %Einteag im Glossar
+    \newglossaryentry{apf}{name=Apfel,  
+    description={Ost aus der Gruppe der Kernobstgewächse}} 
+    
+    %Eintrag ins Abkürzungsverzeichnis
+    \newacronym{cd}{CD}{Compact Disk}
+    
+    \newglossaryentry{dichte}{
+    name=Dichte,  
+    description={Verhältnis von Gewicht zu Volumen},
+    symbol={$\rho$},
+    type=formel,
+    user1={km/m3}
+    } 
+    
+    \begin{document}
+    
+    \gls{apf}
+    
+    \gls{cd}
+    
+    \gls{dichte} % =Dichte
+    \glssymbol{dichte} %= $\rho$
+    
+    \printglossary[title=Glossar,type=main]
+    \printglossary[title=Abkürzungen,type=\acronymtype]
+    \printglossary[title=Formelzeichen,type=formel,style=mytab]
+    
+    \end{document}
+
+Folgende Kompilierreihenfolge ist einzuhalten:
+1) pdf(latex)
+2) makeindex
+3) (pdf)latex
+
+Für den makindex Aufruf hat man nun zwei Möglichkeiten. Expliziter Aufruf oder Aufruf über das mitgelieferte Perl-Skript. 
+Tipp: Der Aufruf per Skript ist auf jeden Fall zu empfehlen wenn man mehrere Verzeichnisse möchte.
+
+1) Explizit:
+Am einfachsten ist der Aufruf in einem Terminal. (Zur Vereinfachung lässt sich dieser Schritt natürlich auch im Editor als Prozedur einrichten)
+
+Windows: 
+Start ->Programme ->Zubehör -> Einbageaufforderung
+Von dort aus in das Projektverzeichnis in dem 'glossarbsp.tex' liegt navigieren.
+
+Im Verzeichnis dann folgende Befehle ausführen:
+makeindex -s glossarbsp.ist -t glossarbsp.glg -o glossarbsp.gls glossarbsp.glo 
+makeindex -s glossarbsp.ist -t glossarbsp.alg -o glossarbsp.acr glossarbsp.acn
+makeindex -s glossarbsp.ist -t glossarbsp.fog -o glossarbsp.foi glossarbsp.foo
+
+
+Linux:
+Ein Terminal öffnen (z.B. Strg+Alt+T drücken).
+Von dort aus in das Projektverzeichnis in dem 'glossarbsp.tex' liegt navigieren.
+
+Im Verzeichnis dann folgenden Befehl ausführen:
+    makeindex -s glossarbsp.ist -t glossarbsp.glg -o glossarbsp.gls glossarbsp.glo 
+    makeindex -s glossarbsp.ist -t glossarbsp.alg -o glossarbsp.acr glossarbsp.acn
+    makeindex -s glossarbsp.ist -t glossarbsp.fog -o glossarbsp.foi glossarbsp.foo
+
+2) Perl-Skript
+Glossaries bringt ein Perl-Skript mit welches den Aufruf von makeindex stark vereinfacht
+
+Windows:
+Es wird ein installierter Perl Interpreter benötigt. Kostenlos ist z.B. Active Perl.
+
+Start ->Programme ->Zubehör -> Einbageaufforderung
+Von dort aus in das Projektverzeichnis in dem 'glossarbsp.tex' liegt navigieren.
+
+Im Verzeichnis dann folgenden Befehl ausführen:
+    makeglossaries glossarbsp
+
+Linux:
+Ein Terminal öffnen (z.B. Strg+Alt+T drücken).
+Von dort aus in das Projektverzeichnis in dem 'glossarbsp.tex' liegt navigieren.
+
+Im Verzeichnis dann folgenden Befehl ausführen:
+    makeglossaries glossarbsp
+
+
 Mathematiksatz
 ==============
  
