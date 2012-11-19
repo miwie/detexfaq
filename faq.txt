@@ -63,7 +63,7 @@ PDFTeX, LuaTeX und XeTeX sind sogenannte »engines«, also die Maschinen, die di
 
 
 
-Wie bearbeite ich LaTeX Dokumente?
+Wie bearbeite ich LaTeX-Dokumente?
 --------------------------------
 
 LaTeX Quellcode wird in reinen Textdateien gespeichert. Sie können im Prinzip mit jedem Texteditor bearbeitet werden (siehe dazu den [Artikel in der Wikipedia](http://de.wikipedia.org/wiki/Texteditor): <http://de.wikipedia.org/wiki/Texteditor>). Es bieten sich spezielle Editoren für LaTeX an. Es gibt hier im Prinzip zwei Arten. Einerseits die *normalen* Texteditoren wie Emacs oder Textmate, die um LaTeX Fähigkeiten erweitert werden. Andererseits gibt es Editoren wie TeXnicCenter, die speziell für den Einsatz mit LaTeX konstruiert wurden. Als Dateiendung hat sich `.tex` etabliert
@@ -71,6 +71,16 @@ LaTeX Quellcode wird in reinen Textdateien gespeichert. Sie können im Prinzip m
 Neben diesen Texteditoren gibt es noch spezielle Anwendungen wie Lyx oder Scientific WorkPlace, die die TeX-Befehle sofort grafisch darstellen, meist aber in einer »so ungefähr könnte es später aussehen« Vorschau. 
 
 Einen Vergleich der LaTeX Editoren gibt es beispielsweise auf tex.stackexchange.com unter <http://tex.stackexchange.com/questions/339/latex-editors-ides>.
+
+
+Kann ich LaTeX auch online verwenden?
+-------------------------------------
+
+Wenn man an einem fremden Rechner ohne LaTeX-Installation arbeiten muss, kann ein LaTeX-Editor in der Cloud hilfreich sein. Momentan gibt es dazu folgende Angebote:
+
+ - **[ShareLaTeX](https://www.sharelatex.com)**, noch in der Entwicklung, kostenlos, private und öffentliche Projekte, Live-Kollaboration
+ - **[ScribTeX](http://www.scribtex.com)**, drei kostenlose Projekte, größere oder mehr Projekte kostenpflichtig
+ - **[verbosus](https://www.verbosus.com/)**, Standardaccount kostenlos, Premiumaccount kostenpflichtig
 
 
 Wo bekomme ich Hilfe?
