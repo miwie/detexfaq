@@ -149,6 +149,37 @@ Wie kann ich die Positionierung der Gleitumgebungen (Tabellen und Abbildungen) b
 Wie kann ich Tabellen und Abbildungen in der Nähe des Aufrufs behalten?
 -----------------------------------------------------------------------
 
+Wie kann ich ein Gleitobjekt das alleine auf einer Seite steht oben an der Seite ausrichten und nicht vertikal zentriert?
+----------------------------------------------------------------------------------------------------
+
+Hat man ein Gleitobjekt das alleine auf einer Seite steht, dann wird dieses automatisch
+auf die Mitte der Seite gesetzt. Dies ist häufig unerwünscht.
+
+Es gibt drei Längen die die Platzierung beeinflussen:
+
+1. `\@fptop` ist der Abstand vom oberen Seitenrand zum ersten Float-Objekt
+1. `\@fpsep` ist der Abstand zwischen zwei Float-Objekten
+1. `\@fpbot` ist der Abstand des unteren Randes der untersten Abbildung zum unteren Seitenrand
+  
+Die Standards von LaTeX sind wie folgt definiert:
+
+    \@fptop = 0pt + 1fil
+    \@fpsep = 8pt + 2fil
+    \@fpbot = 0pt + 1fil
+
+Diese Definitionen sorgen dafür, dass der Freiraum zwischen einem oder mehreren Bildern gleichmäßig verteilt wird.
+
+Um ein Gleitobjekt nun oben auf der Seite zu platzieren kann man den oberen Abstand redefinieren:
+
+    \makeatletter
+    \setlength{\@fptop}{0pt}
+    \makeatother 
+
+Es kann nun sein, dass die Gleitumgebung im Vergleich zu einer Textseite als zu hoch erscheint.
+Dazu kann man nun `\@fptop` auf den Wert `{4pt}` setzen was ungefähr dem Wert `\topskip` - der Höhe des normalen Texts entspricht. `\topskip` ist der Abstand vom oberen Seitenrand zur Grundlinie der ersten Textzeile.
+
+Es ist zu beachten, dass dies eine globale Einstellung ist die sich auf das ganze Dokument auswirkt. Deshalb sollte diese Änderung in der Klassendatei (`*.cls`)
+oder in der Präambel des Dokumentes vorgenommen werden.
 
 
 Bibliographien und Literaturverweise
@@ -499,7 +530,7 @@ Ergänzungen und Korrekturen bitte an <info@texfragen.de> senden oder direkt im 
 Autoren
 -------
 
-Patrick Gundlach, Robin Krahl, Jonas Stein, Dominik Waßenhoven
+Patrick Gundlach, Martin Hehn, Robin Krahl, Jonas Stein, Dominik Waßenhoven
 
 
 Lizenz dieser FAQ
