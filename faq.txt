@@ -1,4 +1,4 @@
-% TeX FAQ (im Aufbau)
+﻿% TeX FAQ (im Aufbau)
 % Patrick Gundlach;
 % 2012-11-05
 <!-- Autoren bitte unten eintragen -->
@@ -244,6 +244,51 @@ Spezialitäten
 =============
 
 Was machen `\makeatletter` und `\makeatother`?
+
+Alle Zeichen in LaTex besitzen einen category code (catcode). Insgesammt gibt es 16 catcodes, 
+wobei z.B. normalen Buchstaben (a-z,A-Z) den catcode 11 erhalten. Sonderzeichen wie "\" (catcode 0) oder "{" (catcode 1)
+und eben auch "@" (catcode 12) werden daher nicht als normale Buchstaben behandelt und dürfen somit
+vom normalen Benutzer nicht in Macros verwendet werden. Deshalb sind z.B. Macronamen wie "\foo123" oder "\foo!"
+ungültig.
+
+In Klassen- (.cls) und Stildateien (.sty) wird "@" jedoch als catcode 11 behandelt und somit
+sind Macros wie z.B. "\@foo" zulässig. Dies erlaubt, dass solche Definitionen vom normalen Benutzer
+geschützt/versetckt werden um z.B. ein versehentliches Überschreiben eines Macros zu verhindern.
+
+Es gibt jedoch manchmal den Bedarf Klassen- oder Stilmacros in der eigenen Datei dennoch zu modifizieren. 
+Dazu möchte man nicht immer gleich eine eigene Klassen- oder Stildatei anlegen sondern die Änderung direkt im
+eigenen Dokument vornehmen (meist in der Preambel). Dafür können dann folgende Befehle verwendet werden:
+
+\makeatletter %Ändert @ catcode von 12 zu 11
+---Definition--
+\makeatother %Ändert @ catcode zurück von 11 zu 12 
+
+Ein Beispiel ist das Ändern der Position von Gleitobjekten auf sonst leeren Seiten:
+
+\makeatletter
+\setlength{\@fptop}{0pt} %Gleitobjekt oben statt mittig auf sonst leerer Seite
+\makeatother
+
+
+Vollständigkeitshalber hier noch eine Liste aller catcodes:
+
+0 für escape "\",
+1 für den Beginn einer Gruppe "{",
+2 für das Ende einer Gruppe "}",
+3 für inline Mathemodus "$",
+4 für den Spaltenausrichter "&",
+5 für das Zeilenede,
+6 für Hash "#",
+7 für das Hoch-Zeichen "^",
+8 für das Tiefgestellt-Teichen "_",
+9 für "ignored characters",
+10 für ein Leerzeichen,
+11 für Buchstaben,
+12 für alles was nicht in 1-11 und 12-15 genannt ist
+13 für das "~" Zeichen,
+14 für das Kommentarzeichen "%" und
+15 für ungültige Zeichen
+
 ---------------------------------------------
 
 Wie erstelle ich eine Nomenklatur/ Abkürzungsverzeichnis/ Formelzeichenverzeichnis?
